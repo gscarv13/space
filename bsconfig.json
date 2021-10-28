@@ -1,11 +1,15 @@
 {
   "name": "rescript-training",
-  "reason": { "react-jsx": 3 },
+  "reason": {
+    "react-jsx": 3
+  },
   "sources": {
     "dir": "src",
     "subdirs": true
   },
-  "bsc-flags": ["-bs-super-errors"],
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
   "package-specs": [
     {
       "module": "es6",
@@ -13,5 +17,9 @@
     }
   ],
   "suffix": ".bs.js",
-  "bs-dependencies": ["@rescript/react"]
+  "bs-dependencies": [
+    "@rescript/react",
+    "@ryyppy/rescript-promise",
+    "bs-fetch"
+  ]
 }
