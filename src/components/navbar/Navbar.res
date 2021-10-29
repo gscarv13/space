@@ -2,5 +2,10 @@
 
 @react.component
 let make = () => {
-  <div className={style["navbar"]}> <Logo /> <MenuOpen /> </div>
+  let (isOpen, setIsOpen) = React.useState(_ => false)
+  let handleClick = _ => setIsOpen(p => !p)
+
+  <div className={style["navbar"]}>
+    <Logo /> <NavButtonsContainer isOpen /> <MenuButton isOpen handleClick />
+  </div>
 }

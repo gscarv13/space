@@ -1,0 +1,13 @@
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  padding-left: 5rem;
+}
