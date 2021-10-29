@@ -4,10 +4,10 @@
 let make = (~isOpen: bool) => {
   let url = RescriptReactRouter.useUrl()
 
-  let home = "00 HOME"
-  let crew = "02 CREW"
-  let destination = "01 DESTINATION"
-  let technology = "03 TECHNOLOGY"
+  let home = "HOME"
+  let crew = "CREW"
+  let destination = "DESTINATION"
+  let technology = "TECHNOLOGY"
 
   let selected = switch url.path {
   | list{"crew"} => crew
@@ -18,10 +18,10 @@ let make = (~isOpen: bool) => {
 
   if isOpen {
     <div className={style["container"]}>
-      <NavButton linkName=home selected linkTo="/" />
-      <NavButton linkName=destination selected linkTo="/destination" />
-      <NavButton linkName=crew selected linkTo="/crew" />
-      <NavButton linkName=technology selected linkTo="/technology" />
+      <NavButton linkName=home selected linkTo="/" numberTag="00 " />
+      <NavButton linkName=destination selected linkTo="/destination" numberTag="01 " />
+      <NavButton linkName=crew selected linkTo="/crew" numberTag="02 " />
+      <NavButton linkName=technology selected linkTo="/technology" numberTag="03 " />
     </div>
   } else {
     <div />

@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Reset button style */
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.number-tag {
+  font-weight: bold;
+}
