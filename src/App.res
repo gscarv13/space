@@ -1,8 +1,22 @@
+// Give acces to jsonResponse type and handleFetch function
+open Fetch
+
 @react.component
 let make = () => {
-  let url = RescriptReactRouter.useUrl()
+  let initialState: DataSourceType.jsonResponse = {
+    destinations: Belt.Map.String.empty,
+    crew: Belt.Map.String.empty,
+    technology: Belt.Map.String.empty,
+  }
 
-  Js.log(url)
+  let (items, setItems) = React.useState(_ => initialState)
+
+  React.useEffect0(() => {
+    handleFetch(setItems)
+    None
+  })
+
+  let url = RescriptReactRouter.useUrl()
 
   let component = switch url.path {
   | list{"destination"} => <h1> {"Destinations"->React.string} </h1>
